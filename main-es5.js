@@ -52,7 +52,7 @@ module.exports = "<app-header (toggleSideBarForMe)=\"sideBarToggler()\"></app-he
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div>\r\n    <app-widget-area [data]=\"bigChart\"></app-widget-area>\r\n</div>\r\n\r\n<br>\r\n\r\n<mat-divider></mat-divider>\r\n\r\n<br>\r\n\r\n<div fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayoutGap=\"20px\" class=\"stats-cards\">\r\n    <mat-card fxFlex=\"25\">\r\n        <app-widget-card label=\"New Users\" total=\"12k\" percentage=\"50\" [data]=\"cards\"></app-widget-card>\r\n    </mat-card>\r\n    <mat-card fxFlex=\"25\">\r\n        <app-widget-card label=\"Users retention\" total=\"10k\" percentage=\"40\" [data]=\"cards\"></app-widget-card>\r\n    </mat-card>\r\n    <mat-card fxFlex=\"25\">\r\n        <app-widget-card label=\"Users engagement\" total=\"8k\" percentage=\"30\" [data]=\"cards\"></app-widget-card>\r\n    </mat-card>\r\n    <mat-card fxFlex=\"25\">\r\n        <app-widget-card label=\"Referral\" total=\"6k\" percentage=\"20\" [data]=\"cards\"></app-widget-card>\r\n    </mat-card>\r\n</div>\r\n\r\n<br>\r\n\r\n<mat-divider></mat-divider>\r\n\r\n<br>\r\n\r\n<div fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayoutGap=\"20px\">\r\n    <div fxFlex=\"60\">\r\n        <div class=\"mat-elevation-z8\">\r\n            <table mat-table [dataSource]=\"dataSource\">\r\n\r\n                <!-- Position Column -->\r\n                <ng-container matColumnDef=\"position\">\r\n                    <th mat-header-cell *matHeaderCellDef> No. </th>\r\n                    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\r\n                </ng-container>\r\n\r\n                <!-- Name Column -->\r\n                <ng-container matColumnDef=\"name\">\r\n                    <th mat-header-cell *matHeaderCellDef> Name </th>\r\n                    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n                </ng-container>\r\n\r\n                <!-- Weight Column -->\r\n                <ng-container matColumnDef=\"weight\">\r\n                    <th mat-header-cell *matHeaderCellDef> Weight </th>\r\n                    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\r\n                </ng-container>\r\n\r\n                <!-- Symbol Column -->\r\n                <ng-container matColumnDef=\"symbol\">\r\n                    <th mat-header-cell *matHeaderCellDef> Symbol </th>\r\n                    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\r\n                </ng-container>\r\n\r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n            </table>\r\n\r\n            <mat-paginator [pageSizeOptions]=\"[5, 10, 20]\"></mat-paginator>\r\n        </div>\r\n\r\n    </div>\r\n    <div fxFlex=\"40\">\r\n        <app-widget-pie [data]=\"pieChart\"></app-widget-pie>\r\n    </div>\r\n</div>\r\n\r\n<br>\r\n<br>\r\n<br>"
+module.exports = "\r\n    <form class=\"example-form\">\r\n        <mat-form-field class=\"example-full-width\">\r\n          <input type=\"text\"\r\n                 placeholder=\"Pick one\"\r\n                 aria-label=\"Number\"\r\n                 matInput\r\n                 [formControl]=\"myControl\"\r\n                 [matAutocomplete]=\"auto\">\r\n          <mat-autocomplete #auto=\"matAutocomplete\">\r\n            <mat-option *ngFor=\"let option of filteredOptions | async\" [value]=\"option\">\r\n              {{option}}\r\n            </mat-option>\r\n          </mat-autocomplete>\r\n        </mat-form-field>\r\n      </form>\r\n\r\n<div>\r\n    <app-widget-area [data]=\"bigChart\"></app-widget-area>\r\n</div>\r\n\r\n<br>\r\n\r\n<mat-divider></mat-divider>\r\n\r\n<br>\r\n\r\n<div fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayoutGap=\"20px\" class=\"stats-cards\">\r\n    <mat-card fxFlex=\"25\">\r\n        <app-widget-card label=\"New Users\" total=\"12k\" percentage=\"50\" [data]=\"cards\"></app-widget-card>\r\n    </mat-card>\r\n    <mat-card fxFlex=\"25\">\r\n        <app-widget-card label=\"Users retention\" total=\"10k\" percentage=\"40\" [data]=\"cards\"></app-widget-card>\r\n    </mat-card>\r\n    <mat-card fxFlex=\"25\">\r\n        <app-widget-card label=\"Users engagement\" total=\"8k\" percentage=\"30\" [data]=\"cards\"></app-widget-card>\r\n    </mat-card>\r\n    <mat-card fxFlex=\"25\">\r\n        <app-widget-card label=\"Referral\" total=\"6k\" percentage=\"20\" [data]=\"cards\"></app-widget-card>\r\n    </mat-card>\r\n</div>\r\n\r\n<br>\r\n\r\n<mat-divider></mat-divider>\r\n\r\n<br>\r\n\r\n<div fxLayout=\"row\" fxLayoutAlign=\"space-between center\" fxLayoutGap=\"20px\">\r\n    <div fxFlex=\"60\">\r\n        <div class=\"mat-elevation-z8\">\r\n            <table mat-table [dataSource]=\"dataSource\">\r\n\r\n                <!-- Position Column -->\r\n                <ng-container matColumnDef=\"position\">\r\n                    <th mat-header-cell *matHeaderCellDef> No. </th>\r\n                    <td mat-cell *matCellDef=\"let element\"> {{element.position}} </td>\r\n                </ng-container>\r\n\r\n                <!-- Name Column -->\r\n                <ng-container matColumnDef=\"name\">\r\n                    <th mat-header-cell *matHeaderCellDef> Name </th>\r\n                    <td mat-cell *matCellDef=\"let element\"> {{element.name}} </td>\r\n                </ng-container>\r\n\r\n                <!-- Weight Column -->\r\n                <ng-container matColumnDef=\"weight\">\r\n                    <th mat-header-cell *matHeaderCellDef> Weight </th>\r\n                    <td mat-cell *matCellDef=\"let element\"> {{element.weight}} </td>\r\n                </ng-container>\r\n\r\n                <!-- Symbol Column -->\r\n                <ng-container matColumnDef=\"symbol\">\r\n                    <th mat-header-cell *matHeaderCellDef> Symbol </th>\r\n                    <td mat-cell *matCellDef=\"let element\"> {{element.symbol}} </td>\r\n                </ng-container>\r\n\r\n                <tr mat-header-row *matHeaderRowDef=\"displayedColumns\"></tr>\r\n                <tr mat-row *matRowDef=\"let row; columns: displayedColumns;\"></tr>\r\n            </table>\r\n\r\n            <mat-paginator [pageSizeOptions]=\"[5, 10, 20]\"></mat-paginator>\r\n        </div>\r\n\r\n    </div>\r\n    <div fxFlex=\"40\">\r\n        <app-widget-pie [data]=\"pieChart\"></app-widget-pie>\r\n    </div>\r\n</div>\r\n\r\n<br>\r\n<br>\r\n<br>"
 
 /***/ }),
 
@@ -96,7 +96,7 @@ module.exports = "<mat-toolbar color=\"primary\">\r\n    <mat-toolbar-row>\r\n  
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<mat-nav-list>\r\n    <div class=\"profile-card\">\r\n        <div class=\"header\">\r\n            <h2>Soufiane FADIL</h2>\r\n            <h4>example@email.com</h4>\r\n        </div>\r\n        <img src=\"https://material.angular.io/assets/img/examples/shiba2.jpg\" alt=\"Soufiane FADIL\">\r\n    </div>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <h2 matSubheader>Pages</h2>\r\n\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/\">Dashboard</a>\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/posts\">Posts</a>\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/articles\">Articles</a>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <h2 matSubheader>Tools</h2>\r\n\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/contacts\">\r\n        <mat-icon>import_contacts</mat-icon>\r\n        Contacts\r\n    </a>\r\n\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/contacts\">\r\n        <mat-icon>contact_phone</mat-icon>\r\n        Leads\r\n    </a>\r\n\r\n</mat-nav-list>"
+module.exports = "<mat-nav-list>\r\n    <div class=\"profile-card\">\r\n        <div class=\"header\">\r\n            <h2>COVID-19</h2>\r\n        </div>\r\n        <img src=\"../../../../assets/1200px-SARS-CoV-2_without_background.png\" alt=\"India\">\r\n        \r\n    </div>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <h2 matSubheader>Pages</h2>\r\n\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/\">Dashboard</a>\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/posts\">Posts</a>\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/articles\">Articles</a>\r\n\r\n    <mat-divider></mat-divider>\r\n\r\n    <h2 matSubheader>Tools</h2>\r\n\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/contacts\">\r\n        <mat-icon>import_contacts</mat-icon>\r\n        Contacts\r\n    </a>\r\n\r\n    <a mat-list-item routerLinkActive=\"list-item-active\" routerLink=\"/contacts\">\r\n        <mat-icon>contact_phone</mat-icon>\r\n        Leads\r\n    </a>\r\n\r\n</mat-nav-list>"
 
 /***/ }),
 
@@ -242,6 +242,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app_component__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./app.component */ "./src/app/app.component.ts");
 /* harmony import */ var _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/platform-browser/animations */ "./node_modules/@angular/platform-browser/fesm5/animations.js");
 /* harmony import */ var _layouts_default_default_module__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./layouts/default/default.module */ "./src/app/layouts/default/default.module.ts");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
 
 
 
@@ -261,7 +263,8 @@ var AppModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_1__["BrowserModule"],
                 _app_routing_module__WEBPACK_IMPORTED_MODULE_3__["AppRoutingModule"],
                 _angular_platform_browser_animations__WEBPACK_IMPORTED_MODULE_5__["BrowserAnimationsModule"],
-                _layouts_default_default_module__WEBPACK_IMPORTED_MODULE_6__["DefaultModule"]
+                _layouts_default_default_module__WEBPACK_IMPORTED_MODULE_6__["DefaultModule"],
+                _angular_common_http__WEBPACK_IMPORTED_MODULE_7__["HttpClientModule"],
             ],
             providers: [],
             bootstrap: [_app_component__WEBPACK_IMPORTED_MODULE_4__["AppComponent"]]
@@ -281,7 +284,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ":host {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n\nmat-drawer {\n  width: 350px;\n}\n\nmat-drawer-container {\n  height: 100%;\n}\n\nmat-drawer-content {\n  padding: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0cy9kZWZhdWx0L0M6XFxVc2Vyc1xcbWttYW5cXERlc2t0b3BcXFdPUktcXFBST0pFQ1RTXFxEYXNoQm9hcmQvc3JjXFxhcHBcXGxheW91dHNcXGRlZmF1bHRcXGRlZmF1bHQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2xheW91dHMvZGVmYXVsdC9kZWZhdWx0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtBQ0NGOztBRENBO0VBQ0UsWUFBQTtBQ0VGOztBRENBO0VBQ0UsWUFBQTtBQ0VGOztBRENBO0VBQ0UsYUFBQTtBQ0VGIiwiZmlsZSI6InNyYy9hcHAvbGF5b3V0cy9kZWZhdWx0L2RlZmF1bHQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG5tYXQtZHJhd2VyIHtcclxuICB3aWR0aDogMzUwcHg7XHJcbn1cclxuXHJcbm1hdC1kcmF3ZXItY29udGFpbmVyIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbm1hdC1kcmF3ZXItY29udGVudCB7XHJcbiAgcGFkZGluZzogMjBweDtcclxufVxyXG4iLCI6aG9zdCB7XG4gIGRpc3BsYXk6IGZsZXg7XG4gIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47XG4gIGhlaWdodDogMTAwJTtcbn1cblxubWF0LWRyYXdlciB7XG4gIHdpZHRoOiAzNTBweDtcbn1cblxubWF0LWRyYXdlci1jb250YWluZXIge1xuICBoZWlnaHQ6IDEwMCU7XG59XG5cbm1hdC1kcmF3ZXItY29udGVudCB7XG4gIHBhZGRpbmc6IDIwcHg7XG59Il19 */"
+module.exports = ":host {\n  display: flex;\n  flex-direction: column;\n  height: 100%;\n}\n\nmat-drawer {\n  width: 350px;\n}\n\nmat-drawer-container {\n  height: 100%;\n}\n\nmat-drawer-content {\n  padding: 20px;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbGF5b3V0cy9kZWZhdWx0L0M6XFxVc2Vyc1xcbWttYW5cXERlc2t0b3BcXFdPUktcXFBST0pFQ1RTXFxEYXNoQm9hcmQvc3JjXFxhcHBcXGxheW91dHNcXGRlZmF1bHRcXGRlZmF1bHQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL2xheW91dHMvZGVmYXVsdC9kZWZhdWx0LmNvbXBvbmVudC5zY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsYUFBQTtFQUNBLHNCQUFBO0VBQ0EsWUFBQTtBQ0NGOztBRENBO0VBQ0UsWUFBQTtBQ0VGOztBRENBO0VBQ0UsWUFBQTtBQ0VGOztBRENBO0VBQ0UsYUFBQTtBQ0VGIiwiZmlsZSI6InNyYy9hcHAvbGF5b3V0cy9kZWZhdWx0L2RlZmF1bHQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyI6aG9zdCB7XHJcbiAgZGlzcGxheTogZmxleDtcclxuICBmbGV4LWRpcmVjdGlvbjogY29sdW1uO1xyXG4gIGhlaWdodDogMTAwJTtcclxufVxyXG5tYXQtZHJhd2VyIHtcclxuICB3aWR0aDogMzUwcHg7XHJcbn1cclxuXHJcbm1hdC1kcmF3ZXItY29udGFpbmVyIHtcclxuICBoZWlnaHQ6IDEwMCU7XHJcbn1cclxuXHJcbm1hdC1kcmF3ZXItY29udGVudCB7XHJcbiAgcGFkZGluZzogMjBweDtcclxufVxyXG5cclxuXHJcbiIsIjpob3N0IHtcbiAgZGlzcGxheTogZmxleDtcbiAgZmxleC1kaXJlY3Rpb246IGNvbHVtbjtcbiAgaGVpZ2h0OiAxMDAlO1xufVxuXG5tYXQtZHJhd2VyIHtcbiAgd2lkdGg6IDM1MHB4O1xufVxuXG5tYXQtZHJhd2VyLWNvbnRhaW5lciB7XG4gIGhlaWdodDogMTAwJTtcbn1cblxubWF0LWRyYXdlci1jb250ZW50IHtcbiAgcGFkZGluZzogMjBweDtcbn0iXX0= */"
 
 /***/ }),
 
@@ -297,16 +300,24 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DefaultComponent", function() { return DefaultComponent; });
 /* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var src_app_shared_geolocation_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! src/app/shared/geolocation.service */ "./src/app/shared/geolocation.service.ts");
+
 
 
 var DefaultComponent = /** @class */ (function () {
-    function DefaultComponent() {
+    function DefaultComponent(geoservice) {
+        this.geoservice = geoservice;
         this.sideBarOpen = true;
     }
-    DefaultComponent.prototype.ngOnInit = function () { };
+    DefaultComponent.prototype.ngOnInit = function () {
+        this.geoservice.getLocation();
+    };
     DefaultComponent.prototype.sideBarToggler = function () {
         this.sideBarOpen = !this.sideBarOpen;
     };
+    DefaultComponent.ctorParameters = function () { return [
+        { type: src_app_shared_geolocation_service__WEBPACK_IMPORTED_MODULE_2__["GeolocationService"] }
+    ]; };
     DefaultComponent = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Component"])({
             selector: 'app-default',
@@ -342,6 +353,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
 /* harmony import */ var _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @angular/flex-layout */ "./node_modules/@angular/flex-layout/esm5/flex-layout.es5.js");
 /* harmony import */ var src_app_modules_dashboard_service__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! src/app/modules/dashboard.service */ "./src/app/modules/dashboard.service.ts");
+/* harmony import */ var src_app_shared_geolocation_service__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! src/app/shared/geolocation.service */ "./src/app/shared/geolocation.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+
+
 
 
 
@@ -372,10 +387,16 @@ var DefaultModule = /** @class */ (function () {
                 _angular_flex_layout__WEBPACK_IMPORTED_MODULE_9__["FlexLayoutModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatCardModule"],
                 _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatPaginatorModule"],
-                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatTableModule"]
+                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatTableModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_12__["ReactiveFormsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatAutocompleteModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatFormFieldModule"],
+                _angular_forms__WEBPACK_IMPORTED_MODULE_12__["FormsModule"],
+                _angular_material__WEBPACK_IMPORTED_MODULE_8__["MatInputModule"]
             ],
             providers: [
-                src_app_modules_dashboard_service__WEBPACK_IMPORTED_MODULE_10__["DashboardService"]
+                src_app_modules_dashboard_service__WEBPACK_IMPORTED_MODULE_10__["DashboardService"],
+                src_app_shared_geolocation_service__WEBPACK_IMPORTED_MODULE_11__["GeolocationService"]
             ]
         })
     ], DefaultModule);
@@ -475,7 +496,7 @@ var DashboardService = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = ".stats-cards .mat-card {\n  overflow: hidden;\n}\n\ntable {\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9kYXNoYm9hcmQvQzpcXFVzZXJzXFxta21hblxcRGVza3RvcFxcV09SS1xcUFJPSkVDVFNcXERhc2hCb2FyZC9zcmNcXGFwcFxcbW9kdWxlc1xcZGFzaGJvYXJkXFxkYXNoYm9hcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDRTtFQUNFLGdCQUFBO0FDQUo7O0FESUE7RUFDRSxXQUFBO0FDREYiLCJmaWxlIjoic3JjL2FwcC9tb2R1bGVzL2Rhc2hib2FyZC9kYXNoYm9hcmQuY29tcG9uZW50LnNjc3MiLCJzb3VyY2VzQ29udGVudCI6WyIuc3RhdHMtY2FyZHMge1xyXG4gIC5tYXQtY2FyZCB7XHJcbiAgICBvdmVyZmxvdzogaGlkZGVuO1xyXG4gIH1cclxufVxyXG5cclxudGFibGUge1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcbiIsIi5zdGF0cy1jYXJkcyAubWF0LWNhcmQge1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG50YWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufSJdfQ== */"
+module.exports = ".stats-cards .mat-card {\n  overflow: hidden;\n}\n\ntable {\n  width: 100%;\n}\n\n.example-form {\n  min-width: 150px;\n  max-width: 500px;\n  width: 100%;\n}\n\n.example-full-width {\n  width: 100%;\n}\n/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNyYy9hcHAvbW9kdWxlcy9kYXNoYm9hcmQvQzpcXFVzZXJzXFxta21hblxcRGVza3RvcFxcV09SS1xcUFJPSkVDVFNcXERhc2hCb2FyZC9zcmNcXGFwcFxcbW9kdWxlc1xcZGFzaGJvYXJkXFxkYXNoYm9hcmQuY29tcG9uZW50LnNjc3MiLCJzcmMvYXBwL21vZHVsZXMvZGFzaGJvYXJkL2Rhc2hib2FyZC5jb21wb25lbnQuc2NzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDRTtFQUNFLGdCQUFBO0FDQUo7O0FESUE7RUFDRSxXQUFBO0FDREY7O0FESUE7RUFDRSxnQkFBQTtFQUNBLGdCQUFBO0VBQ0EsV0FBQTtBQ0RGOztBRElBO0VBQ0UsV0FBQTtBQ0RGIiwiZmlsZSI6InNyYy9hcHAvbW9kdWxlcy9kYXNoYm9hcmQvZGFzaGJvYXJkLmNvbXBvbmVudC5zY3NzIiwic291cmNlc0NvbnRlbnQiOlsiLnN0YXRzLWNhcmRzIHtcclxuICAubWF0LWNhcmQge1xyXG4gICAgb3ZlcmZsb3c6IGhpZGRlbjtcclxuICB9XHJcbn1cclxuXHJcbnRhYmxlIHtcclxuICB3aWR0aDogMTAwJTtcclxufVxyXG5cclxuLmV4YW1wbGUtZm9ybSB7XHJcbiAgbWluLXdpZHRoOiAxNTBweDtcclxuICBtYXgtd2lkdGg6IDUwMHB4O1xyXG4gIHdpZHRoOiAxMDAlO1xyXG59XHJcblxyXG4uZXhhbXBsZS1mdWxsLXdpZHRoIHtcclxuICB3aWR0aDogMTAwJTtcclxufSIsIi5zdGF0cy1jYXJkcyAubWF0LWNhcmQge1xuICBvdmVyZmxvdzogaGlkZGVuO1xufVxuXG50YWJsZSB7XG4gIHdpZHRoOiAxMDAlO1xufVxuXG4uZXhhbXBsZS1mb3JtIHtcbiAgbWluLXdpZHRoOiAxNTBweDtcbiAgbWF4LXdpZHRoOiA1MDBweDtcbiAgd2lkdGg6IDEwMCU7XG59XG5cbi5leGFtcGxlLWZ1bGwtd2lkdGgge1xuICB3aWR0aDogMTAwJTtcbn0iXX0= */"
 
 /***/ }),
 
@@ -493,6 +514,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
 /* harmony import */ var _dashboard_service__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../dashboard.service */ "./src/app/modules/dashboard.service.ts");
 /* harmony import */ var _angular_material__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @angular/material */ "./node_modules/@angular/material/esm5/material.es5.js");
+/* harmony import */ var src_app_shared_geolocation_service__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! src/app/shared/geolocation.service */ "./src/app/shared/geolocation.service.ts");
+/* harmony import */ var _angular_forms__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @angular/forms */ "./node_modules/@angular/forms/fesm5/forms.js");
+/* harmony import */ var rxjs_operators__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! rxjs/operators */ "./node_modules/rxjs/_esm5/operators/index.js");
+
+
+
 
 
 
@@ -520,22 +547,37 @@ var ELEMENT_DATA = [
     { position: 20, name: 'Calcium', weight: 40.078, symbol: 'Ca' },
 ];
 var DashboardComponent = /** @class */ (function () {
-    function DashboardComponent(dashboardService) {
+    function DashboardComponent(dashboardService, geoservice) {
         this.dashboardService = dashboardService;
+        this.geoservice = geoservice;
+        //charts variables
         this.bigChart = [];
         this.cards = [];
         this.pieChart = [];
         this.displayedColumns = ['position', 'name', 'weight', 'symbol'];
         this.dataSource = new _angular_material__WEBPACK_IMPORTED_MODULE_3__["MatTableDataSource"](ELEMENT_DATA);
+        //search bar variables
+        this.myControl = new _angular_forms__WEBPACK_IMPORTED_MODULE_5__["FormControl"]();
+        this.options = ['One', 'Two', 'Three'];
     }
     DashboardComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.filteredOptions = this.myControl.valueChanges
+            .pipe(Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["startWith"])(''), Object(rxjs_operators__WEBPACK_IMPORTED_MODULE_6__["map"])(function (value) { return _this._filter(value); }));
+        this.geolocationPosition = this.geoservice.getGeoLocation();
         this.bigChart = this.dashboardService.bigChart();
         this.cards = this.dashboardService.cards();
         this.pieChart = this.dashboardService.pieChart();
         this.dataSource.paginator = this.paginator;
+        console.log(this.geolocationPosition);
+    };
+    DashboardComponent.prototype._filter = function (value) {
+        var filterValue = value.toLowerCase();
+        return this.options.filter(function (option) { return option.toLowerCase().includes(filterValue); });
     };
     DashboardComponent.ctorParameters = function () { return [
-        { type: _dashboard_service__WEBPACK_IMPORTED_MODULE_2__["DashboardService"] }
+        { type: _dashboard_service__WEBPACK_IMPORTED_MODULE_2__["DashboardService"] },
+        { type: src_app_shared_geolocation_service__WEBPACK_IMPORTED_MODULE_4__["GeolocationService"] }
     ]; };
     tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
         Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["ViewChild"])(_angular_material__WEBPACK_IMPORTED_MODULE_3__["MatPaginator"], { static: true })
@@ -733,6 +775,78 @@ var SidebarComponent = /** @class */ (function () {
         })
     ], SidebarComponent);
     return SidebarComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "./src/app/shared/geolocation.service.ts":
+/*!***********************************************!*\
+  !*** ./src/app/shared/geolocation.service.ts ***!
+  \***********************************************/
+/*! exports provided: GeolocationService */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GeolocationService", function() { return GeolocationService; });
+/* harmony import */ var tslib__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tslib */ "./node_modules/tslib/tslib.es6.js");
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _angular_common_http__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @angular/common/http */ "./node_modules/@angular/common/fesm5/http.js");
+
+
+
+var GeolocationService = /** @class */ (function () {
+    function GeolocationService(http) {
+        this.http = http;
+        this.geolocationPosition = "India";
+    }
+    GeolocationService.prototype.getLocation = function () {
+        var _this = this;
+        if (window.navigator && window.navigator.geolocation) {
+            window.navigator.geolocation.getCurrentPosition(function (position) {
+                _this.callApi(position.coords.latitude, position.coords.longitude)
+                    .then(function (data) {
+                    _this.geolocationPosition = data.address.state;
+                }, function (err) {
+                    console.log("error with https://geocode.xyz : " + err);
+                });
+            }, function (error) {
+                switch (error.code) {
+                    case 1:
+                        console.log('Permission Denied');
+                        break;
+                    case 2:
+                        console.log('Position Unavailable');
+                        break;
+                    case 3:
+                        console.log('Timeout');
+                        break;
+                }
+            });
+        }
+        ;
+        return this.geolocationPosition;
+    };
+    GeolocationService.prototype.callApi = function (Latitude, Longitude) {
+        //https://nominatim.openstreetmap.org/reverse?format=json&lat=${Latitude}&lon=${Longitude}&zoom=18&addressdetails=1
+        var url = "https://nominatim.openstreetmap.org/reverse?format=json&lat=" + Latitude + "&lon=" + Longitude + "&zoom=18&addressdetails=1";
+        //Call API
+        return this.http.get(url).toPromise();
+    };
+    GeolocationService.prototype.getGeoLocation = function () {
+        return this.geolocationPosition;
+    };
+    GeolocationService.ctorParameters = function () { return [
+        { type: _angular_common_http__WEBPACK_IMPORTED_MODULE_2__["HttpClient"] }
+    ]; };
+    GeolocationService = tslib__WEBPACK_IMPORTED_MODULE_0__["__decorate"]([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_1__["Injectable"])({
+            providedIn: 'root'
+        })
+    ], GeolocationService);
+    return GeolocationService;
 }());
 
 
